@@ -1,0 +1,133 @@
+%
+% Projekt: CV-lazy-style.tex
+% Autor:   Michal Ľaš
+% Datum:   28.05.2023
+% 
+
+
+\documentclass[a4paper, 11pt, a4paper, oneside, titlepage]{article}
+\usepackage[a4paper, left=1.5cm, right=1.5cm, top=1cm, bottom=2cm]{geometry}
+
+\usepackage[slovak]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{Archivo}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{lipsum} % !!! DELETE THIS !!!
+
+\pagenumbering{gobble} % remove page numbers
+\definecolor{titleBack}{RGB}{16,29,66}
+\definecolor{specText}{RGB}{35,46,209}
+\setlength{\columnsep}{5cm} % column separation
+
+
+% Adjust section title format
+\titleformat{\section}
+  {\normalfont\Large\bfseries} % Font and style settings for section title
+  {} % Label formatting
+  {0pt} % Separation between label and title
+  {} % Code preceding the title
+  [\vspace{-1.5em}\rule{\linewidth}{1.8pt}] % Code following the title
+
+
+
+\begin{document}
+
+% Title
+\noindent\Huge YOUR NAME \normalsize
+
+% Header
+\setstretch{1.5}
+
+\bigskip
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l l l@{}}
+    \faEnvelope{} \href{mailto: yourname@yourdomain.com}{yourname@yourdomain.com} & \faLinkedin{} \href{https://www.linkedin.com/in/yourlinkedin/}{LinkedIn} & \faGithub{} \href{https://github.com/yourgithub}{yourgithub} \\
+    \faPhone{} your phone number & \faTwitter{} \href{https://twitter.com/yourtwitter}{yourtwitter} & \faMapMarker{} your address \\
+\end{tabular*}
+
+\bigskip
+
+% Document
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+    \section*{PROJECTS}
+    \setstretch{1}
+    % Project 1
+    \Large \textcolor{specText}{Project 1} \normalsize
+    \begin{itemize}
+        \item \lipsum[1][1-1]
+        \item \lipsum[1][2-4]
+        \item \lipsum[1][4-6]
+    \end{itemize}
+
+    % Project 2
+    \Large \textcolor{specText}{Project 2} \normalsize
+    \begin{itemize}
+        \item \lipsum[1][1-1]
+        \item \lipsum[1][2-3]
+        \item \lipsum[1][4-5]
+        \item \lipsum[1][6-7]
+    \end{itemize}
+
+    % Project 3
+    \Large \textcolor{specText}{Project 3} \normalsize
+    \begin{itemize}
+        \item \lipsum[1][1-1]
+        \item \lipsum[1][2-4]
+        \item \lipsum[1][4-6]
+    \end{itemize}
+
+    \setstretch{1.5}
+    \section*{EDUCATION}
+    \setstretch{1}
+
+    % University
+    \faCalendar{} year\,--\,year \\
+    (title.) Name of school program \\
+    Name of school
+
+    \bigskip
+    % High school
+    \faCalendar{} year\,--\,year \\
+    Name of school
+
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+    \setstretch{1.5}
+    \section*{PROFIL}
+    \setstretch{1}
+
+    \lipsum[2][1-5]
+
+    \setstretch{1.5}
+    \section*{SKILLS}
+    \setstretch{1}
+
+    \begin{itemize}[leftmargin=*, itemsep=4pt]
+        \item PUT
+        \item HERE
+        \item YOUR
+        \item SKILLS
+    \end{itemize}
+
+    \setstretch{1.5}
+    \section*{HOBBY}
+    \setstretch{1}
+
+    \begin{itemize}[leftmargin=*, itemsep=4pt]
+        \item Sitting all day
+        \item Doing nothing
+        \item ...
+    \end{itemize}
+    
+\end{minipage}
+
+\end{document}
